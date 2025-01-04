@@ -1,1 +1,1 @@
-sigma|https://sigma.com|https://sigma.com/image.png
+sigma|https://sigma.com/game.html|https://sigma.com/image.png
