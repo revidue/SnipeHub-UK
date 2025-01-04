@@ -1,1 +1,2 @@
 sigma|https://sigma.com/game.html|https://sigma.com/image.png
+blank|https://blank.com/game.html|https://blank.com/image.png
