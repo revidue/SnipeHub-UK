@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strawberry Code</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff4d6d;
+            --secondary-color: #ff8fa3;
+            --background-light: #fff0f3;
+            --text-light: #1a1a1a;
+            --text-dark: #f1f1f1;
+            --card-light: #ffffff;
+            --card-dark: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--card-light);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .logo:hover {
+            color: var(--secondary-color);
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            min-height: calc(100vh - 140px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .card {
+            background-color: var(--card-light);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        #gameGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        .game-card {
+            background-color: var(--card-light);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .game-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .game-title {
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--card-light);
+            color: var(--text-light);
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: var(--text-dark);
+        }
+
+        body.dark-mode header,
+        body.dark-mode .card,
+        body.dark-mode .game-card,
+        body.dark-mode footer {
+            background-color: var(--card-dark);
+        }
+
+        body.dark-mode .nav-link {
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .input {
+            background-color: #333;
+            color: var(--text-dark);
+            border-color: #555;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            #gameGrid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo" id="logo">🍓 Strawberry Code</a>
+                <nav>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+                    <a href="#" class="nav-link" id="settingsLink">Settings</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="loginContainer" class="card fade-in">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="licenseKey" placeholder="Enter license key" class="input">
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" id="guestLogin" class="btn btn-secondary">Use Guest Account</button>
+            </form>
+        </div>
+
+        <div id="tosContainer" class="card fade-in" style="display: none;">
+            <h2>Terms of Service</h2>
+            <div>
+                <input type="checkbox" id="tosAccept">
+                <label for="tosAccept">When you click accept, you accept our <a href="https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/tos.html" target="_blank">TOS</a>.</label>
+            </div>
+            <button id="tosAcceptBtn" class="btn" disabled>Accept</button>
+        </div>
+
+        <div id="gameGrid" class="fade-in" style="display: none;"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with ❤ by SnipeCo. 🍀</p>
+        </div>
+    </footer>
+
+    <script>
+        const validKeys = {
+            "cubex2": 1, "nitrotheman": 1, "4x20@": 1, "backagain": 1, "total": 1,
+            "popcornpro": 1, "blockwavekeys": 1, "thedefinitionofblockwave": 1,
+            "unblockwave": 1, "subkeys10": 1, "masterofpopcorn": 1, "shortcutstore": 1,
+            "iam01": 2, "snipeconitro": 2
+        };
+
+        let userTier = 1;
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const licenseKey = document.getElementById('licenseKey').value;
+            if (validKeys.hasOwnProperty(licenseKey)) {
+                userTier = validKeys[licenseKey];
+                showTOS();
+            } else {
+                showError('Invalid license key');
+            }
+        });
+
+        document.getElementById('guestLogin').addEventListener('click', function() {
+            userTier = 1;
+            showTOS();
+        });
+
+        document.getElementById('tosAccept').addEventListener('change', function() {
+            document.getElementById('tosAcceptBtn').disabled = !this.checked;
+        });
+
+        document.getElementById('tosAcceptBtn').addEventListener('click', function() {
+            showGameGrid();
+        });
+
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌓';
+        });
+
+        document.getElementById('logo').addEventListener('click', function(e) {
+            e.preventDefault();
+            location.reload();
+        });
+
+        document.getElementById('settingsLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            showMessage('Settings page is under construction!');
+        });
+
+        function showTOS() {
+            fadeOut(document.getElementById('loginContainer'), () => {
+                fadeIn(document.getElementById('tosContainer'));
+            });
+        }
+
+        function showGameGrid() {
+            fadeOut(document.getElementById('tosContainer'), () => {
+                fadeIn(document.getElementById('gameGrid'));
+                fetchGames();
+            });
+        }
+
+        async function fetchGames() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/main/svrlinker.txt');
+                const data = await response.text();
+                const games = data.split('\n').filter(line => line.trim() !== '').map(line => {
+                    const [name, url, image, tier] = line.split('|');
+                    return { name, url, image, tier: parseInt(tier) };
+                });
+                renderGames(games);
+            } catch (error) {
+                console.error('Error fetching games:', error);
+                showError('Failed to load games. Please try again.');
+            }
+        }
+
+        function renderGames(games) {
+            const gameGrid = document.getElementById('gameGrid');
+            gameGrid.innerHTML = '';
+            games.filter(game => game.tier <= userTier).forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'game-card fade-in';
+                card.innerHTML = `
+                    <img src="${game.image}" alt="${game.name}" class="game-image" onerror="this.onerror=null; this.src='/placeholder.svg?height=200&width=200'; this.alt='Web Filter has Censored this Image';">
+                    <div class="game-title">${game.name}</div>
+                `;
+                card.addEventListener('click', () => handleGameClick(game.url));
+                gameGrid.appendChild(card);
+            });
+        }
+
+        async function handleGameClick(url) {
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
+                const win = window.open('', '_blank');
+                if (win) {
+                    win.document.write(html);
+                    win.document.close();
+                }
+            } catch (error) {
+                console.error('Error loading game:', error);
+                showError('Failed to load the game. Please try again.');
+            }
+        }
+
+        function showError(message) {
+            const errorElement = document.createElement('div');
+            errorElement.textContent = message;
+            errorElement.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #ff4d4d;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                z-index: 1000;
+            `;
+            document.body.appendChild(errorElement);
+            setTimeout(() => {
+                errorElement.remove();
+            }, 3000);
+        }
+
+        function showMessage(message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messageElement.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                z-index: 1000;
+            `;
+            document.body.appendChild(messageElement);
+            setTimeout(() => {
+                messageElement.remove();
+            }, 3000);
+        }
+
+        function fadeOut(element, callback) {
+            element.style.opacity = '1';
+            (function fade() {
+                if ((element.style.opacity -= .1) < 0) {
+                    element.style.display = 'none';
+                    if (callback) callback();
+                } else {
+                    requestAnimationFrame(fade);
+                }
+            })();
+        }
+
+        function fadeIn(element, display) {
+            element.style.opacity = '0';
+            element.style.display = display || 'block';
+            (function fade() {
+                var val = parseFloat(element.style.opacity);
+                if (!((val += .1) > 1)) {
+                    element.style.opacity = val;
+                    requestAnimationFrame(fade);
+                }
+            })();
+        }
+    </script>
+</body>
+</html>
