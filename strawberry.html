@@ -247,13 +247,20 @@
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
         }
+
+        #tosButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo" id="logo">🍓 Strawberry Code</a>
+                <a href="#" class="logo" id="logo" title="Escape to Google">🍓 Strawberry Code</a>
                 <nav>
                     <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
                     <a href="#" class="nav-link" id="settingsLink">Settings</a>
@@ -283,6 +290,8 @@
 
         <div id="gameGrid" class="fade-in" style="display: none;"></div>
     </main>
+
+    <button id="tosButton" class="btn">TOS</button>
 
     <footer>
         <div class="container">
@@ -331,12 +340,32 @@
 
         document.getElementById('logo').addEventListener('click', function(e) {
             e.preventDefault();
-            location.reload();
+            window.open('https://www.google.com', '_blank');
+            window.location.href = 'https://www.google.com';
         });
 
         document.getElementById('settingsLink').addEventListener('click', function(e) {
             e.preventDefault();
-            showMessage('Settings page is under construction!');
+            const win = window.open('about:blank', '_blank');
+            if (win) {
+                win.document.write('<iframe src="https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/settings.html" style="width:100%;height:100%;border:none;"></iframe>');
+                win.document.close();
+            }
+        });
+
+        document.getElementById('tosButton').addEventListener('click', async function() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/tos.html');
+                const html = await response.text();
+                const win = window.open('', '_blank');
+                if (win) {
+                    win.document.write(html);
+                    win.document.close();
+                }
+            } catch (error) {
+                console.error('Error loading TOS:', error);
+                showError('Failed to load TOS. Please try again.');
+            }
         });
 
         function showTOS() {
@@ -378,23 +407,59 @@
                     <div class="game-title">${game.name}</div>
                 `;
                 card.addEventListener('click', () => handleGameClick(game.url));
+                card.addEventListener('contextmenu', (e) => handleContextMenu(e, game));
                 gameGrid.appendChild(card);
             });
         }
 
-        async function handleGameClick(url) {
+        async function handleGameClick(url, mode = 'site') {
             try {
-                const response = await fetch(url);
-                const html = await response.text();
-                const win = window.open('', '_blank');
-                if (win) {
-                    win.document.write(html);
-                    win.document.close();
+                if (mode === 'code') {
+                    const response = await fetch(url);
+                    const html = await response.text();
+                    const win = window.open('', '_blank');
+                    if (win) {
+                        win.document.write(html);
+                        win.document.close();
+                    }
+                } else {
+                    const win = window.open('', '_blank');
+                    if (win) {
+                        win.document.write(`<iframe src="${url}" style="width:100%;height:100%;border:none;"></iframe>`);
+                        win.document.close();
+                    }
                 }
             } catch (error) {
                 console.error('Error loading game:', error);
-                showError('Failed to load the game. Please try again.');
+                // If loading fails, iframe the URL
+                const win = window.open('', '_blank');
+                if (win) {
+                    win.document.write(`<iframe src="${url}" style="width:100%;height:100%;border:none;"></iframe>`);
+                    win.document.close();
+                }
             }
+        }
+
+        function handleContextMenu(e, game) {
+            e.preventDefault();
+            const contextMenu = document.createElement('div');
+            contextMenu.style.position = 'fixed';
+            contextMenu.style.top = `${e.clientY}px`;
+            contextMenu.style.left = `${e.clientX}px`;
+            contextMenu.style.backgroundColor = 'white';
+            contextMenu.style.border = '1px solid black';
+            contextMenu.style.padding = '5px';
+            contextMenu.style.zIndex = '1000';
+            contextMenu.innerHTML = `
+                <div style="cursor:pointer;padding:5px;" onclick="handleGameClick('${game.url}', 'code')">Open as Code</div>
+                <div style="cursor:pointer;padding:5px;" onclick="handleGameClick('${game.url}', 'site')">Open as Site</div>
+            `;
+            document.body.appendChild(contextMenu);
+            const removeMenu = () => {
+                document.body.removeChild(contextMenu);
+                document.removeEventListener('click', removeMenu);
+            };
+            document.addEventListener('click', removeMenu);
         }
 
         function showError(message) {
@@ -414,26 +479,6 @@
             document.body.appendChild(errorElement);
             setTimeout(() => {
                 errorElement.remove();
-            }, 3000);
-        }
-
-        function showMessage(message) {
-            const messageElement = document.createElement('div');
-            messageElement.textContent = message;
-            messageElement.style.cssText = `
-                position: fixed;
-                top: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: #4CAF50;
-                color: white;
-                padding: 10px 20px;
-                border-radius: 5px;
-                z-index: 1000;
-            `;
-            document.body.appendChild(messageElement);
-            setTimeout(() => {
-                messageElement.remove();
             }, 3000);
         }
 
