@@ -1,6 +1,6 @@
 # Tutorial Utilities
 
-(Open Code)[https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/strawberry.html]
+[Open Code](https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/strawberry.html)
 
 ```
 # DO NOT EDIT THIS CODE
