@@ -2,3 +2,4 @@ Minecraft|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/c
 Among Us|https://quality001.vercel.app/games/among-us/index.html|invalid|2
 Interstellar|https://clown.thegalleryofart.org/|https://www.rapidseedbox.com/wp-content/uploads/Interstellar_Proxy_06.jpg|1
 Acura Proxy [!BETA!]|https://healthy-chocolate-judge.glitch.me/|https://static.wixstatic.com/media/76696d_330b90c16e1940b398bc8bd689625540~mv2.png/v1/fit/w_2500,h_1330,al_c/76696d_330b90c16e1940b398bc8bd689625540~mv2.png|2
+Legacy Node EOL|none|none|1
