@@ -3,3 +3,9 @@ Terms|https://hastebin.ianhon.com/de05|https://icon-library.com/images/terms-and
 Tortilla|https://tortillagames.org/|https://tortillagames.org/assets/img/tortilla.png|1|1
 Changelog|https://hastebin.ianhon.com/a0dd|https://icons.veryicon.com/png/o/education-technology/education-app/version-information.png|2|1
 Eaglercraft|https://github.com/WFIS01/SnipeHub-UK/blob/main/newplank.html|https://i.ibb.co/HDQVsHVb/image.png|1|2
+Survival Karts|https://freezenova.cdn.msnfun.com/9mxlkjlsf9bg/v11/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIyRjMyRTA5OEY1NzY2QUQzMDcyN0Y1MTBGNDUxNkI1NyIsImxvY2FsZSI6ImVuLXhsIiwiZW50cnlQb2ludElkIjoiIn0|https://freezenova.github.io/media/posts/554/survival-karts.jpg|1|1
+1v1 Lol|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/1v1lol.html|https://th.bing.com/th/id/R.8efea247983096d6b6bb0989fb3a099a?rik=PSQC1VrvF%2fNElQ&pid=ImgRaw&r=0|1|2
+CS 1.6|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/cs1.6.html|https://th.bing.com/th/id/R.7b6650e8264e586851db9844e26aece7?rik=9cSIepCPvWbu0A&pid=ImgRaw&r=0|1|2
+1v1.Lol|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/doblox.html|https://clipartcraft.com/images/roblox-logo-transparent-blue-2.png|1|2
+Gun Spin|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/gunspin.html|https://th.bing.com/th/id/OIP.Bg7qEtTEG2VmtTWPoOmilgAAAA?cb=iwc2&rs=1&pid=ImgDetMain|1|2
+Granny|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/granny.html|https://unblockedfreegame.com/wp-content/uploads/2024/06/granny-gauntlet.jpg|1|2
