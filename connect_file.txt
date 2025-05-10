@@ -9,3 +9,4 @@ CS 1.6|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/page
 1v1.Lol|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/doblox.html|https://clipartcraft.com/images/roblox-logo-transparent-blue-2.png|1|2
 Gun Spin|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/gunspin.html|https://th.bing.com/th/id/OIP.Bg7qEtTEG2VmtTWPoOmilgAAAA?cb=iwc2&rs=1&pid=ImgDetMain|1|2
 Granny|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/granny.html|https://unblockedfreegame.com/wp-content/uploads/2024/06/granny-gauntlet.jpg|1|2
+Ideas|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/ideas.txt|https://static.vecteezy.com/system/resources/previews/018/874/633/original/light-bulb-icon-line-transparent-background-png.png|2|2
