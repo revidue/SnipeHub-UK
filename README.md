@@ -2,7 +2,7 @@
 Welcome, not to just a Github Repository but to where Change occurs.
 
 # Version Info
-09/05/25 - We're cleaning up the repository and archiving the Strawberry features, however they should still be compatible. We will attempt to keep everything compatible.
+09/05/25 - We're cleaning up the repository and archiving the Strawberry features, if you fork the repo and take all the archives out the archived folder then you'll be able to host Strawberry R2/R1 again. (Round2,Round1)
 
 ![Static Badge](https://img.shields.io/badge/Powered_by:-SnipeHub-blue)
 
