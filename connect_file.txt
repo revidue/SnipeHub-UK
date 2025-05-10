@@ -1,3 +1,4 @@
 Ripple Repository|https://github.com/WFIS01/SnipeHub-UK/|https://cdn.freebiesupply.com/logos/large/2x/ripple-2-logo-png-transparent.png|2
 Terms|https://hastebin.ianhon.com/de05|https://icon-library.com/images/terms-and-conditions-icon/terms-and-conditions-icon-14.jpg|2
 Tortilla|https://tortillagames.org/|https://tortillagames.org/assets/img/tortilla.png|1
+Changelog|https://hastebin.ianhon.com/a0dd|https://icons.veryicon.com/png/o/education-technology/education-app/version-information.png|2
