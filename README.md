@@ -6,6 +6,8 @@ Welcome, not to just a Github Repository but to where Change occurs.
 10/05/25 - We're adding to this repository and getting it ready for Ripple.<br>
 11/05/25 - Updating SnipeHub to have more verification so bots can't take down your site via DDoS<br>
 
+[Ripple Frontend](https://github.com/MrInc0gnito/ripple)
+
 ![Static Badge](https://img.shields.io/badge/Powered_by:-SnipeHub-blue)
 
 ```
