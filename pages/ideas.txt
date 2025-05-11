@@ -1,12 +1,12 @@
 Ideas:
 
 - Key System
-- Settings for customisation
-- About:Blank
-- Cloaking in settings
-- Different themes
+- Settings for customisation ✅
+- SnipeShield ✅
+- Cloaking in settings ✅
+- Different themes ✅
 - Different URLs that are unblocked ✅
 - Get URL ✅
-- Proxy
+- Proxy ✅
 - Loading animation ✅
-- Apps (ChatGPT)
+- Apps (ChatGPT) 
