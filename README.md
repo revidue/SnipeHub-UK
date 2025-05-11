@@ -9,5 +9,5 @@ Welcome, not to just a Github Repository but to where Change occurs.
 ![Static Badge](https://img.shields.io/badge/Powered_by:-SnipeHub-blue)
 
 ```
-TUTORIAL FOR HOSTING RIPPLE COMING SOON...
+[RIPPLE HOST](https://github.com/MrInc0gnito/ripple)
 ```
