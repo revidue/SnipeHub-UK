@@ -5,8 +5,8 @@ Ideas:
 - About:Blank
 - Cloaking in settings
 - Different themes
-- Different URLs that are unblocked
-- Get URL
+- Different URLs that are unblocked ✅
+- Get URL ✅
 - Proxy
-- Loading animation
+- Loading animation ✅
 - Apps (ChatGPT)
