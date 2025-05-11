@@ -1,4 +1,4 @@
-Ripple Repository|https://github.com/WFIS01/SnipeHub-UK/|https://cdn.freebiesupply.com/logos/large/2x/ripple-2-logo-png-transparent.png|2|1
+Ripple Repository|https://hastebin.ianhon.com/ad90|https://i.ibb.co/KzftD25N/download-3.png|2|1
 Terms|https://hastebin.ianhon.com/de05|https://icon-library.com/images/terms-and-conditions-icon/terms-and-conditions-icon-14.jpg|2|1
 Tortilla|https://tortillagames.org/|https://tortillagames.org/assets/img/tortilla.png|1|1
 Changelog|https://hastebin.ianhon.com/a0dd|https://icons.veryicon.com/png/o/education-technology/education-app/version-information.png|2|1
@@ -10,3 +10,4 @@ CS 1.6|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/page
 Gun Spin|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/gunspin.html|https://th.bing.com/th/id/OIP.Bg7qEtTEG2VmtTWPoOmilgAAAA?cb=iwc2&rs=1&pid=ImgDetMain|1|2
 Granny|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/granny.html|https://unblockedfreegame.com/wp-content/uploads/2024/06/granny-gauntlet.jpg|1|2
 Ideas|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/ideas.txt|https://static.vecteezy.com/system/resources/previews/018/874/633/original/light-bulb-icon-line-transparent-background-png.png|2|2
+Proxy|https://truetest.starnightimport.com/|https://rammerhead-sage.vercel.app/logo.png|1|1
