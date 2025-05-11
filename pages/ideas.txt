@@ -10,3 +10,4 @@ Ideas:
 - Proxy ✅
 - Loading animation ✅
 - Apps (ChatGPT) 
+- Paid Subscription (SnipePlus removes ads, access to RippleBases and Extra features)
