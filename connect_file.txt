@@ -12,3 +12,4 @@ Granny|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/page
 Ideas|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/ideas.txt|https://static.vecteezy.com/system/resources/previews/018/874/633/original/light-bulb-icon-line-transparent-background-png.png|2|2
 Proxy|https://truetest.starnightimport.com/|https://rammerhead-sage.vercel.app/logo.png|1|1
 Stack|https://raw.githubusercontent.com/WFIS01/SnipeHub-UK/refs/heads/main/pages/games/stack.html|https://creazilla-store.fra1.digitaloceanspaces.com/icons/3217618/stack-icon-md.png|1|2
+Minecraft 1.8.8|https://raw.githubusercontent.com/revidue/SnipeHub-UK/refs/heads/main/craft.html|https://gyazo.com/a4abc5fdb965d1b97db38453012efc73/thumb/1000|1|2
